@@ -12,7 +12,8 @@ module.exports = (dato, root, i18n) => {
                 index: index,
                 slug: mainPage.slug,
                 ...dato.configuration.data,
-                ...dato.site.globalSeo.value
+                ...dato.site.globalSeo.value,
+                ...dato.site.globalSeo.value.fallbackSeo
               },
               content: mainPage.answer || ''
             }
