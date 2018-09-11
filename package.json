@@ -10,7 +10,7 @@
     "production": "./node_modules/.bin/dato dump",
     "build": "rm -fr release/ && node metalsmith.js"
   },
-  "devDependencies": {
+  "dependencies": {
     "datocms-client": "^0.5.4",
     "handlebars": "^4.0.11",
     "html-tag": "^2.0.0",
