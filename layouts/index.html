@@ -4,17 +4,26 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta http-equiv="Cache-Control" content="max-age=3600" />
   <meta name="keywords" content="{{ keywords }}">
-  <meta name="title" content="{{ title }}">
+  <meta name="title" content="{{ siteName }} {{ titleSuffix }}">
   <meta name="description" content="{{ description }}">
   <meta name="locale" content="{{ locale }}">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="icon" type="image/png" href="/images/favicon.png">
 
-  <title> {{ title }} </title>
+  <title> {{ siteName }} </title>
 
   <link rel="stylesheet" type="text/css" href="/styles/main.css">
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600' rel='stylesheet' type='text/css'>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-80826141-3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-80826141-3');
+  </script>
 </head>
 
 <body class="{{ locale }}" data-lang="{{ locale }}">
@@ -23,9 +32,7 @@
   <div class="content-limiter flex space-between">
 
     <div class="logo">
-      <a href="/" class="white">
-        <img src="https://www.datocms-assets.com/6307/1530796180-logo.svg" alt="PushPushGo">
-      </a>
+      <img src="https://www.datocms-assets.com/6307/1530796180-logo.svg" alt="PushPushGo">
     </div>
 
     <div class="main-menu flex space-between">
@@ -35,7 +42,7 @@
 
 <section class="page-intro">
   <div class="content-limiter">
-    <h1>{{title}}</h1>
+    <h1>{{siteName}}</h1>
     <p>&nbsp;</p>
   </div>
 </section>

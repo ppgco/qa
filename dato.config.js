@@ -11,7 +11,8 @@ module.exports = (dato, root, i18n) => {
                 locale: lang,
                 index: index,
                 slug: mainPage.slug,
-                ...dato.configuration.data
+                ...dato.configuration.data,
+                ...dato.site.globalSeo.value
               },
               content: mainPage.answer || ''
             }
