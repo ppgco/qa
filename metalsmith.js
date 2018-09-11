@@ -99,7 +99,7 @@ const config = {
     faq: {
       pattern: '**/*.md',
       sortBy: 'index',
-      reverse: true
+      reverse: false
     }
   }
 }
