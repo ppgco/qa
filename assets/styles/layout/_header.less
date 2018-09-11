@@ -1,0 +1,267 @@
+body {
+	opacity: 1;
+}
+
+header.main {
+	background: rgba(255,255,255,@header-opacity);
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	box-sizing: border-box;
+	height: @header-height;
+	z-index: 5;
+	width: 100%;
+	transition: background-color 0.5s, height @base-transition;
+	font-size: @header-font-size;
+
+	.content-limiter {
+		height: 100%;
+	}
+
+	.nav-link {
+		color: lighten(@text-color, 24%);
+		display: inline-block;
+		text-decoration: none;
+		padding: 7px 5px;
+		font-size: 14px;
+		margin: 0 5px;
+		font-weight: @font-normal;
+		position: relative;
+		text-transform: uppercase;
+		transition: margin-top @base-transition;
+		cursor: pointer;
+
+		span { vertical-align: middle; }
+
+		&.active {
+			color: @green;
+			font-weight: @font-bold;
+		}
+
+		&:hover {
+			color: @green;
+		}
+	}
+
+	.expandable-link {
+		> .nav-link span {
+			font-weight: @font-bold;
+		}
+	}
+
+}
+
+.expandable-link {
+	display: inline-block;
+	position: relative;
+
+	ul {
+		position: absolute;
+		top: 100%;
+		left: 10px;
+		width: 150px;
+		margin-top: 0px;
+		padding: 10px 5px;
+		display: none;
+		text-align: left;
+		z-index: 1;
+
+		li {
+			margin: 0px;
+		}
+	}
+
+	&:hover {
+		ul { display: block; }
+	}
+}
+
+.nav-wrapper {
+	display: flex;
+	align-items: center;
+}
+
+.main-menu-toggle {
+	position: absolute;
+	right: 20px;
+  padding: 22px 15px;
+	display: none;
+}
+
+body.scrolled {
+	header.main {
+		height: @header-height - 10px;
+		box-shadow: @header-shadow;
+		.logo {
+			width: 140px;
+		}
+	}
+}
+
+.call-us {
+	a { color: @text-color; }
+}
+
+.logo {
+	width: 180px;
+	margin-right: 20px;
+	transition: width @base-transition;
+
+	img {
+		max-width: 100%;
+		display: inline-block;
+	}
+}
+
+.logo-subtitle {
+	display: inline-block;
+	font-size: 18px;
+	font-weight: @font-bold;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+
+nav.main-nav {
+	float: left;
+}
+
+nav.auth-nav {
+	float: right;
+	.language-toggle {
+		vertical-align: middle;
+		margin-left: 10px;
+		margin-bottom: 3px;
+	}
+}
+
+@media @large {
+
+	.language-toggle {
+		position: relative;
+		width: @languageToggleHeight;
+		height: @languageToggleHeight;
+		display: inline-block;
+		text-align: center;
+		&:hover {
+			.language-toggle-list {
+				height: @languageToggleHeight;
+			}
+		}
+	}
+
+	.language-toggle-list {
+		position: absolute;
+		top: 0;
+		left: 0;
+		padding-top: @languageToggleHeight;
+		width: 100%;
+		overflow: hidden;
+		height: 0px;
+		border: 1px solid #dedede;
+		border-radius: 4px;
+		transition: height @base-transition;
+		background: white;
+		> a {
+			line-height: @languageToggleHeight - 6;
+			padding: 0px;
+			color: @text-color;
+			display: block;
+			width: 100%;
+			font-size: 14px;
+		}
+		> a.active {
+			position: absolute;
+			top: 0;
+			left: 0;
+			line-height: @languageToggleHeight;
+		}
+		> a:hover {
+			color: @brand-color;
+		}
+	}
+
+}
+
+.main-menu {
+	width: 100%;
+}
+
+@media @medium {
+	body {
+		padding-top:  60px;
+	}
+	.main-menu-toggle {
+		display: block;
+	}
+	header.main, body.scrolled header.main {
+		height: 60px;
+		.content-limiter {
+			padding: 0 10px;
+		}
+		.logo {
+			width: 140px;
+		}
+		.main-menu {
+			display: none;
+			float: none;
+			width: 100%;
+			background: rgba(241, 241, 241, @header-opacity);
+			position: absolute;
+			top: 100%;
+			left: 0px;
+			padding: 20px 10px;
+			> nav {
+				display: block;
+				float: left;
+				width: 50%;
+				> a:not(.btn), .call-us {
+					display: block;
+					padding: 10px;
+					margin: 0;
+				}
+				> a.btn {
+					margin: 10px auto;
+					width: auto;
+				}
+				.language-toggle {
+					margin: 0px;
+				}
+				.language-toggle-list a {
+					display: inline-block;
+					padding: 5px 10px;
+					border-radius: @base-radius;
+
+					&.active {
+						border: 1px solid @green;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+@media (max-width: 1550px) {
+	header.main {
+		.content-limiter {
+			width: auto;
+			padding-right: 20px;
+			padding-left: 20px;
+		}
+
+	}
+}
+
+@media (max-width: 1300px) {
+	header.main {
+		font-size: 13px;
+
+		a.nav-link {
+			font-size: 13px;
+		}
+
+		.logo {
+			width: 150px;
+		}
+	}
+}

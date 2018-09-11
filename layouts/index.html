@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="Cache-Control" content="max-age=3600" />
+  <meta name="keywords" content="{{ keywords }}">
+  <meta name="title" content="{{ title }}">
+  <meta name="description" content="{{ description }}">
+  <meta name="locale" content="{{ locale }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+
+  <title> {{ title }} </title>
+
+  <link rel="stylesheet" type="text/css" href="/styles/main.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body class="{{ locale }}" data-lang="{{ locale }}">
+
+<header class="main">
+  <div class="content-limiter flex space-between">
+
+    <div class="logo">
+      <a href="/" class="white">
+        <img src="https://www.datocms-assets.com/6307/1530796180-logo.svg" alt="PushPushGo - platforma do wysyłki web push">
+      </a>
+    </div>
+
+    <span class="icon-menu main-menu-toggle"></span>
+
+    <div class="main-menu flex space-between">
+
+    </div>
+  </div>
+</header>
+
+<section class="page-intro">
+  <div class="content-limiter">
+    <h1>{{title}}</h1>
+    <p>{{question}}</p>
+  </div>
+</section>
+
+<div class="content-limiter">
+  <div class="row top">
+    <div class="column column-20">
+      <section class="user-guide">
+        <div class="menu-wrapper">
+          {{#each collections.faq locale}}
+            <a href="/{{path}}" class="{{#ifCond  ../slug slug}}active{{/ifCond}}">{{title}}</a>
+          {{/each}}
+        </div>
+      </section>
+    </div>
+    <div class="column column-80">
+      <div class="user-guide__content">
+        {{{contents}}}
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="main-footer" id="contact">
+  <div class="content-limiter">
+    <div class="row">
+      <div class="logo-column column">
+        <a href="#" class="logo">PushPushGo</a>
+        <p class="copyright">2018</p>
+      </div>
+
+      <div class="socials-column column">
+        <a href="https://www.linkedin.com/company/10915197" class="icon-linkedin" target="_blank"></a>
+        <a href="https://twitter.com/PushPushGo" class="icon-twitter" target="_blank"></a>
+        <a href="https://www.facebook.com/PushPushGo/" target="_blank" class="icon-facebook" target="_blank"></a>
+        <a href="https://www.youtube.com/channel/UCpp-mdjtSkq9bmSGcOlzQ7A" target="_blank" class="icon-youtube" target="_blank"></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

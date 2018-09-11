@@ -1,0 +1,40 @@
+{
+  "name": "pushpushgo-landing",
+  "version": "1.1.0",
+  "description": "pushpushgo-landing",
+  "license": "ISC",
+  "scripts": {
+    "dev": "PORT=8083 ./node_modules/metalsmith-start/bin/metalsmith-start",
+    "watch": "./node_modules/.bin/dato dump --preview --watch",
+    "staging": "./node_modules/.bin/dato dump --preview",
+    "production": "./node_modules/.bin/dato dump",
+    "build": "rm -fr release/ && node metalsmith.js"
+  },
+  "devDependencies": {
+    "datocms-client": "^0.5.4",
+    "handlebars": "^4.0.11",
+    "html-tag": "^2.0.0",
+    "lodash": "^4.17.10",
+    "metalsmith": "^2.1.0",
+    "metalsmith-assets": "^0.1.0",
+    "metalsmith-clean-css": "^5.0.1",
+    "metalsmith-collections": "^0.9.0",
+    "metalsmith-concat": "^6.0.0",
+    "metalsmith-env": "^2.1.1",
+    "metalsmith-html-minifier": "^2.4.5",
+    "metalsmith-ignore": "^0.1.2",
+    "metalsmith-imagemin": "^4.1.1",
+    "metalsmith-layouts": "^1.6.5",
+    "metalsmith-less": "^2.0.0",
+    "metalsmith-markdown": "^0.2.2",
+    "metalsmith-metadata": "0.0.4",
+    "metalsmith-pagination": "^1.4.0",
+    "metalsmith-sitemap": "^1.0.0",
+    "metalsmith-start": "^2.0.1",
+    "metalsmith-tags": "^2.0.0",
+    "metalsmith-uglify": "^1.5.3",
+    "metalsmith-word-count": "0.0.4",
+    "moment": "^2.22.2",
+    "zepto": "^1.2.0"
+  }
+}
