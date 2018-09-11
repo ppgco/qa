@@ -117,16 +117,16 @@ const app = Metalsmith(__dirname)
   })
   .use(collections(config.collections))
   .use(markdown())
+  .use(ignore(config.ignore))
   .use(layouts(config.layouts))
-  .use(cleanCSS(config.cssmin))
-  .use(htmlMinifier())
 
 if (module.parent) {
   module.exports = app
 } else {
   app
+    .use(cleanCSS(config.cssmin))
+    .use(htmlMinifier())
     .use(sitemap(config.sitemap))
-    .use(ignore(config.ignore))
     .build(function(err) {
       if (err) console.log(err.stack)
     })
