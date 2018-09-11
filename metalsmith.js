@@ -11,6 +11,19 @@ const htmlMinifier = require('metalsmith-html-minifier');
 const Handlebars = require('handlebars');
 const assets = require('metalsmith-assets');
 
+Handlebars.registerHelper("link", function(value, locale, opts) {
+  if (!value)
+    return;
+
+  if (value.indexOf('http') !== -1)
+    return value;
+
+  if (locale && typeof locale !== 'object')
+    return '/' + locale + '/' + (value || '').replace('index.md', '').replace('index.html', '');
+
+  return (value || '').replace('index.md', '').replace('index.html', '');
+});
+
 Handlebars.registerHelper('ifCond', function(v1, v2, options) {
   if (v1 === v2) {
     return options.fn(this);
@@ -86,7 +99,8 @@ const config = {
   collections: {
     faq: {
       pattern: '**/*.md',
-      reverse: false
+      sortBy: 'index',
+      reverse: true
     }
   }
 }
