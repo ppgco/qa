@@ -81,7 +81,6 @@ const config = {
     url: "https://subscribers.pushpushgo.com/"
   },
   layouts: {
-    default: 'index.html',
     engine: 'handlebars',
     directory: 'layouts'
   },
