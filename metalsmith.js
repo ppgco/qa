@@ -75,9 +75,7 @@ const config = {
     "destination": "."
   },
   meta: {
-    title: "PushPushGo - Subscribers knowledge center",
-    keywords: 'knowledge, subscribers, webpush, push, notifications, email, marketing, solution, saas, powiadomienia web push, notyfikacje, aplikacja, narzędzie, powiadomienia na stronie, offbrowser, desktop, mobile, message, wiadomości dla użytkowników, pushpushgo',
-    description: "Solve your problems today! PushPushGo Subscriber knowledge center",
+    keywords: 'knowledge, subscribers, webpush, push, notifications, powiadomienia web push, notyfikacje, pushpushgo',
     url: "https://subscribers.pushpushgo.com/"
   },
   layouts: {
