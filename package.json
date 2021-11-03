@@ -8,7 +8,7 @@
     "watch": "./node_modules/.bin/dato dump --preview --watch",
     "staging": "./node_modules/.bin/dato dump --preview",
     "production": "./node_modules/.bin/dato dump",
-    "build": "rm -fr release/ && node metalsmith.js"
+    "build": "rm -fr release/ && node metalsmith.js && cp _redirects release/_redirects"
   },
   "dependencies": {
     "datocms-client": "^0.5.4",
