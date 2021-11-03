@@ -7,8 +7,8 @@
     "dev": "PORT=8083 ./node_modules/metalsmith-start/bin/metalsmith-start",
     "watch": "./node_modules/.bin/dato dump --preview --watch",
     "staging": "./node_modules/.bin/dato dump --preview",
-    "production": "./node_modules/.bin/dato dump && ls -al",
-    "build": "node metalsmith.js && ls -al"
+    "production": "./node_modules/.bin/dato dump && cd release && ls -al",
+    "build": "node metalsmith.js && cd release && ls -al"
   },
   "dependencies": {
     "datocms-client": "^0.5.4",
