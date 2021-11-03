@@ -1,2 +1,4 @@
 /pl/*                     https://pushpushgo.com/pl/przelaczaj-uprawnienia-push       301
 /en/*                     https://pushpushgo.com/en/toggle-push-notifications         301
+/                         https://pushpushgo.com/en/toggle-push-notifications         301
+                      
